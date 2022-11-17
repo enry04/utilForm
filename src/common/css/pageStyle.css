@@ -6,6 +6,8 @@
 }
 
 body,html{
-    background-color: #DCD4D4;
-
+    background-image: url("../images/pageBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
