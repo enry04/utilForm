@@ -16,5 +16,34 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="form-container">
+            <h2>form</h2>
+            <form method="post">
+                <div class="items-container">
+                    <div class="item">
+                        <input type="text" placeholder="some text" name="textBox">
+                        <label for="textBox">text</label>
+                    </div>
+                    <div class="item">
+                        <input type="number" placeholder="some numbers" name="numberBox">
+                        <label for="numberBox">number</label>
+                    </div>
+                </div>
+                <div class="items-container">
+                    <div class="item">
+                        <input type="date" name="dateBox">
+                        <label for="dateBox">date</label>
+                        <select>
+                            <option value="">default</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
