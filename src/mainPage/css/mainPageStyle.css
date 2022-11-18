@@ -3,14 +3,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-width: 570px;
+  min-width: 670px;
   min-height: 610px;
 }
 
 .main-container {
   border-radius: 10px;
   position: relative;
-  width: 550px;
+  width: 750px;
   height: 590px;
   overflow: hidden;
   z-index: 9;
@@ -21,7 +21,7 @@ body {
   top: -50%;
   left: -50%;
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-  width: 550px;
+  width: 750px;
   height: 590px;
   animation: animation 6.5s linear infinite;
   transform-origin: bottom right;
@@ -33,7 +33,7 @@ body {
   top: -50%;
   left: -50%;
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-  width: 550px;
+  width: 750px;
   height: 590px;
   animation: animation 6.5s linear infinite;
   transform-origin: bottom right;
@@ -58,8 +58,6 @@ body {
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .top-container {
@@ -72,19 +70,22 @@ body {
   letter-spacing: 1px;
 }
 
-.inputs-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .items-container {
-
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  width: 70%;
+  position: absolute;
+  height: 400px;
+  top: 20%;
+  border: solid red;
 }
 
-#fileBox{
-    color: transparent;
+.item input[type=text],
+.item input[type=number]{
+
+  height: 25px;
+
+
+}
+
+#fileBox {
+  color: transparent;
 }

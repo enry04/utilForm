@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/mainPageStyle.css">
     <link rel="stylesheet" href="../common/css/pageStyle.css">
 </head>
+
 <body>
     <main>
         <div class="main-container">
@@ -16,19 +17,25 @@
                 <div class="top-container">
                     <h2>Form</h2>
                 </div>
-                <div class="inputs-container">
+                <div class="items-container">
+                    <form method="post">
+                        <div class="first-row-container">
+                            <input type="text" placeholder="text" name="textBox">
+                            <input type="number" placeholder="number" name="numberBox">
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="inputs-container">
                     <form method="post">
                         <div class="items-container">
                             <div class="item">
-                                <input type="text" placeholder="some text" name="textBox">
-                                <label for="textBox">text</label>
+                                <input type="text" placeholder="text" name="textBox">
                             </div>
                             <div class="item">
-                                <input type="number" placeholder="some numbers" name="numberBox">
-                                <label for="numberBox">number</label>
+                                <input type="number" placeholder="number" name="numberBox">
                             </div>
-                        </div>
-                        <!-- <div class="items-container">
+                        </div> -->
+                <!-- <div class="items-container">
                             <div class="item">
                                 <input type="date" name="dateBox">
                                 <label for="dateBox">date</label>
@@ -52,9 +59,9 @@
                                 <input type="radio" name="radio" value="4">
                                 <label for="4">4</label>
                             </div> -->
-                    </form>
-                </div>
+                </form>
             </div>
+        </div>
         </div>
     </main>
 </body>
