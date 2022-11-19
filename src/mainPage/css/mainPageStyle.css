@@ -23,7 +23,7 @@ body {
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   width: 750px;
   height: 590px;
-  animation: animation 6.5s linear infinite;
+  animation: animation 6s linear infinite;
   transform-origin: bottom right;
 }
 
@@ -35,7 +35,7 @@ body {
   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
   width: 750px;
   height: 590px;
-  animation: animation 6.5s linear infinite;
+  animation: animation 6s linear infinite;
   transform-origin: bottom right;
   animation-delay: -3s;
 }
@@ -72,18 +72,70 @@ body {
 
 .items-container {
   width: 70%;
-  position: absolute;
+  position: relative;
   height: 400px;
   top: 20%;
-  border: solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.item input[type=text],
-.item input[type=number]{
+.row {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  left: 0;
+}
 
-  height: 25px;
+.first-row-container {
+  justify-content: space-between;
+  top: 20%;
+}
 
+.first-row-container input[type="text"],
+.first-row-container input[type="number"] {
+  width: 200px;
+  background: transparent;
+  height: 40px;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: #45f3ff solid;
+  outline: 0;
+}
 
+.input-container {
+  position: relative;
+}
+
+.input-container span {
+  font-size: 1em;
+  color: #8f8f8f;
+  position: absolute;
+  left: 3px;
+  bottom: 10%;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-container input:valid ~ span,
+.input-container input:focus ~ span{
+  color: #45f3ff;
+  transform: translateY(-40px);
+  font-size: 0.75em;
+
+}
+
+.second-row-container {
+  top: 40%;
+}
+
+.third-row-container {
+  top: 60%;
+}
+
+.fourth-row-container {
+  top: 80%;
 }
 
 #fileBox {

@@ -15,13 +15,41 @@
         <div class="main-container">
             <div class="form-container">
                 <div class="top-container">
-                    <h2>Form</h2>
+                    <h2>Aggiungi un record</h2>
                 </div>
                 <div class="items-container">
                     <form method="post">
-                        <div class="first-row-container">
-                            <input type="text" placeholder="text" name="textBox">
-                            <input type="number" placeholder="number" name="numberBox">
+                        <div class="first-row-container row">
+                            <div class="input-container">
+                                <input type="text" name="textBox" required="required">
+                                <span>text</span>
+                            </div>
+                            <div class="input-container">
+                                <input type="number" name="numberBox" required="required">
+                                <span>number</span>
+                            </div>
+                        </div>
+                        <div class="second-row-container row">
+                            <input type="date">
+                            <span>date</span>
+                            <input type="file">
+                            <span>file</span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="1">1</option>
+                                <option value="1">1</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div class="third-row-container row">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="radio">
+                            <input type="checkbox">
+                        </div>
+                        <div class="fourth-row-container row">
+                            <input type="submit">
                         </div>
                     </form>
                 </div>
