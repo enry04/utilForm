@@ -100,12 +100,15 @@ body {
   padding: 0 10px 0 10px;
   border-radius: 5px;
   border: none;
-  border-bottom: #45f3ff solid;
+  border-bottom: #8f8f8f solid;
   outline: 0;
+  font-size: 15px;
+  color: aliceblue;
 }
 
 .input-container {
   position: relative;
+  transition: 0.5s;
 }
 
 .input-container span {
@@ -118,12 +121,26 @@ body {
   transition: 0.5s;
 }
 
-.input-container input:valid ~ span,
-.input-container input:focus ~ span{
+.input-container input[type="text"]:valid ~ span,
+.input-container input[type="text"]:focus ~ span,
+.input-container input[type="number"]:valid ~ span,
+.input-container input[type="number"]:focus ~ span{
   color: #45f3ff;
   transform: translateY(-40px);
   font-size: 0.75em;
+}
 
+.input-container input[type="text"]:valid,
+.input-container input[type="text"]:focus,
+.input-container input[type="number"]:valid,
+.input-container input[type="number"]:focus{
+  border: solid #45f3ff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .second-row-container {
