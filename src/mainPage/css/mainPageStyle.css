@@ -92,8 +92,9 @@ body {
   top: 15%;
 }
 
-.first-row-container input[type="text"],
-.first-row-container input[type="number"] {
+input[type="text"],
+input[type="number"],
+input[type="date"] {
   width: 200px;
   background: transparent;
   height: 40px;
@@ -121,10 +122,12 @@ body {
   transition: 0.5s;
 }
 
-.input-container input[type="text"]:valid ~ span,
-.input-container input[type="text"]:focus ~ span,
-.input-container input[type="number"]:valid ~ span,
-.input-container input[type="number"]:focus ~ span{
+input[type="text"]:valid ~ span,
+input[type="text"]:focus ~ span,
+input[type="number"]:valid ~ span,
+input[type="number"]:focus ~ span,
+input[type="date"]:focus ~ span,
+input[type="date"]:valid ~ span {
   color: #45f3ff;
   transform: translateY(-40px);
   font-size: 0.75em;
@@ -133,31 +136,41 @@ body {
 .input-container input[type="text"]:valid,
 .input-container input[type="text"]:focus,
 .input-container input[type="number"]:valid,
-.input-container input[type="number"]:focus{
+.input-container input[type="number"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="date"]:valid {
   border: solid #45f3ff;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 .second-row-container {
   justify-content: space-between;
+  align-items: flex-end;
   top: 40%;
 }
 
-.input-container input[type="date"]{
+.input-container input[type="date"] {
+  color: transparent;
+  text-align: center;
+  font-size: 17px;
+}
 
-  width: 150px;
-  height: 40px;
-  padding: 15px;
-  color: #8f8f8f;
-  background: transparent;
-  outline: none;
-  border: none;
+.input-container input[type="date"]:focus,
+.input-container input[type="date"]:valid {
+  color: aliceblue;
+}
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .third-row-container {
@@ -166,8 +179,4 @@ input::-webkit-inner-spin-button {
 
 .fourth-row-container {
   top: 90%;
-}
-
-#fileBox {
-  color: transparent;
 }

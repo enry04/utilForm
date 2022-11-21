@@ -25,19 +25,20 @@
                                 <span>text</span>
                             </div>
                             <div class="input-container">
-                                <input type="number" name="numberBox" required="required">
+                                <input type="number" name="numberBox" required="required" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
                                 <span>number</span>
                             </div>
                         </div>
                         <div class="second-row-container row">
                             <div class="input-container">
                                 <input type="date" required="required">
-                                <!-- <span>date</span> -->
+                                <span>date</span>
                             </div>
                             <div class="input-container">
-                                <input type="file" >
-                                <span>file</span>
+                                <input type="file">
                             </div>
+                        </div>
+                        <div class="third-row-container row">
                             <div class="input-container">
                                 <select>
                                     <option value="1">1</option>
@@ -46,8 +47,6 @@
                                     <option value="1">1</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="third-row-container row">
                             <input type="radio" name="radio" required="required">
                             <input type="radio" name="radio" required="required">
                             <input type="radio" name="radio" required="required">
@@ -59,9 +58,7 @@
                         </div>
                     </form>
                 </div>
-                </form>
             </div>
-        </div>
         </div>
     </main>
 </body>
