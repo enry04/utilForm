@@ -32,10 +32,10 @@
                         <div class="second-row-container row">
                             <div class="input-container">
                                 <input type="date" required="required">
-                                <span>date</span>
+                                <!-- <span>date</span> -->
                             </div>
                             <div class="input-container">
-                                <input type="file">
+                                <input type="file" >
                                 <span>file</span>
                             </div>
                             <div class="input-container">
