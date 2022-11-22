@@ -40,19 +40,19 @@
                             </div>
                         </div>
                         <div class="third-row-container row">
-                            <div class="input-container">
+                            <div class="input-container radio-container">
                                 <input type="radio" name="radio" id="1" required="required">
                                 <label for="1">diksmdn</label>
                             </div>
-                            <div class="input-container">
+                            <div class="input-container radio-container">
                                 <input type="radio" name="radio" id="2" required="required">
                                 <label for="2">diksmdn</label>
                             </div>
-                            <div class="input-container">
+                            <div class="input-container radio-container">
                                 <input type="radio" name="radio" id="3" required="required">
                                 <label for="3">diksmdn</label>
                             </div>
-                            <div class="input-container">
+                            <div class="input-container radio-container">
                                 <input type="radio" name="radio" id="4" required="required">
                                 <label for="4">diksmdn</label>
                             </div>
@@ -69,7 +69,11 @@
                             <div class="input-container">
                                 <input type="checkbox">
                             </div>
-                            <input type="submit">
+                        </div>
+                        <div class="fifth-row-container row">
+                            <div class="input-container">
+                                <input type="submit">
+                            </div>
                         </div>
                     </form>
                 </div>
