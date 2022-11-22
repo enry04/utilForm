@@ -94,7 +94,8 @@ body {
 
 input[type="text"],
 input[type="number"],
-input[type="date"] {
+input[type="date"],
+input[type="file"] {
   width: 200px;
   background: transparent;
   height: 40px;
@@ -127,18 +128,22 @@ input[type="text"]:focus ~ span,
 input[type="number"]:valid ~ span,
 input[type="number"]:focus ~ span,
 input[type="date"]:focus ~ span,
-input[type="date"]:valid ~ span {
+input[type="date"]:valid ~ span,
+input[type="file"]:focus ~ span,
+input[type="file"]:valid ~ span {
   color: #45f3ff;
   transform: translateY(-40px);
   font-size: 0.75em;
 }
 
-.input-container input[type="text"]:valid,
-.input-container input[type="text"]:focus,
-.input-container input[type="number"]:valid,
-.input-container input[type="number"]:focus,
-.input-container input[type="date"]:focus,
-.input-container input[type="date"]:valid {
+input[type="text"]:valid,
+input[type="text"]:focus,
+input[type="number"]:valid,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="date"]:valid,
+input[type="file"]:focus,
+input[type="file"]:valid {
   border: solid #45f3ff;
 }
 
@@ -155,10 +160,12 @@ input::-webkit-inner-spin-button {
   top: 40%;
 }
 
-.input-container input[type="date"] {
+.input-container input[type="date"],
+.input-container input[type="file"] {
   color: transparent;
   text-align: center;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .input-container input[type="date"]:focus,
@@ -171,6 +178,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
   appearance: none;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
 }
 
 .third-row-container {
