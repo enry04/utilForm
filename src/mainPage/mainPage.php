@@ -36,25 +36,39 @@
                             </div>
                             <div class="input-container">
                                 <input type="file" required="required" id="btnFile">
-                                <span id = "currentFile">Choose file</span>                          
+                                <span id="currentFile">Choose file</span>
                             </div>
                         </div>
                         <div class="third-row-container row">
                             <div class="input-container">
-                                <select>
-                                    <option value="1">1</option>
-                                    <option value="1">1</option>
-                                    <option value="1">1</option>
-                                    <option value="1">1</option>
-                                </select>
+                                <input type="radio" name="radio" id="1" required="required">
+                                <label for="1">diksmdn</label>
                             </div>
-                            <input type="radio" name="radio" required="required">
-                            <input type="radio" name="radio" required="required">
-                            <input type="radio" name="radio" required="required">
-                            <input type="radio" name="radio" required="required">
-                            <input type="checkbox">
+                            <div class="input-container">
+                                <input type="radio" name="radio" id="2" required="required">
+                                <label for="2">diksmdn</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="radio" name="radio" id="3" required="required">
+                                <label for="3">diksmdn</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="radio" name="radio" id="4" required="required">
+                                <label for="4">diksmdn</label>
+                            </div>
                         </div>
                         <div class="fourth-row-container row">
+                            <div class="input-container">
+                                <select>
+                                    <option value="1">wfvwrvwv</option>
+                                    <option value="1">dadf</option>
+                                    <option value="1">nencej</option>
+                                    <option value="1">1ìkdmekfdm</option>
+                                </select>
+                            </div>
+                            <div class="input-container">
+                                <input type="checkbox">
+                            </div>
                             <input type="submit">
                         </div>
                     </form>
