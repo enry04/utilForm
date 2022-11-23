@@ -60,17 +60,18 @@
                         <div class="fourth-row-container row">
                             <div class="input-container">
                                 <select>
+                                    <option hidden disabled></option>
                                     <option value="1">wfvwrvwv</option>
                                     <option value="1">dadf</option>
                                     <option value="1">nencej</option>
                                     <option value="1">1ìkdmekfdm</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="fifth-row-container row">
                             <div class="input-container">
                                 <input type="checkbox">
                             </div>
-                        </div>
-                        <div class="fifth-row-container row">
                             <div class="input-container">
                                 <input type="submit">
                             </div>

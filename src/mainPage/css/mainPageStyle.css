@@ -220,6 +220,7 @@ input[type="file"]::-webkit-file-upload-button {
   bottom: 0;
   right: 0;
   cursor: pointer;
+  z-index: 100;
 }
 
 .radio-container label{
@@ -232,11 +233,16 @@ input[type="file"]::-webkit-file-upload-button {
   text-align: center;
   line-height: 36px;
   border-radius: 5px;
+  z-index: 90;
 
 }
 
 .radio-container input[type="radio"]{
   opacity: 0.011;
+}
+
+.radio-container:hover{
+  border: #45f3ff solid;
 }
 
 .input-container input[type="radio"]:checked + label{
@@ -249,7 +255,33 @@ input[type="file"]::-webkit-file-upload-button {
   justify-content: center;
 }
 
+.input-container select{
 
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-bottom: #8f8f8f solid;
+  background: transparent;
+  text-align: center;
+  outline: 0;
+  color: #8f8f8f;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.input-container select:hover{
+
+  border-bottom: #45f3ff solid;
+
+}
+
+.input-container select:focus,
+.input-container select:checked{
+
+  border: #45f3ff solid;
+  color: aliceblue;
+
+}
 
 .fifth-row-container {
 
