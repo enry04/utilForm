@@ -74,7 +74,7 @@
                                 <span></span>
                             </div>
                             <div class="input-container">
-                                <input type="submit">
+                                <input type="submit" value="conferma">
                             </div>
                         </div>
                     </form>

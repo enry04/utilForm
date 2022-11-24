@@ -250,7 +250,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .input-container select {
-  width: 250px;
+  width: 160px;
   height: 40px;
   border: none;
   border-bottom: #8f8f8f solid;
@@ -274,6 +274,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .fifth-row-container {
+  align-items: center;
   justify-content: space-between;
   top: 90%;
 }
@@ -295,7 +296,7 @@ input[type="file"]::-webkit-file-upload-button {
   cursor: pointer;
 }
 
-.checkbox-container input[type="checkbox"] ~ span{
+.checkbox-container input[type="checkbox"] ~ span {
   position: absolute;
   border: #8f8f8f solid;
   border-radius: 5px;
@@ -303,36 +304,32 @@ input[type="file"]::-webkit-file-upload-button {
   height: 100%;
   top: 0;
   left: 0;
-}  
-
-.input-container input[type="checkbox"]:hover ~ span{
-
-  border: #45f3ff solid;
-
 }
 
-.input-container input[type="checkbox"]:checked ~ span{
+.input-container input[type="checkbox"]:hover ~ span {
+  border: #45f3ff solid;
+}
 
+.input-container input[type="checkbox"]:checked ~ span {
   background-color: #45f3ff;
   border: none;
 }
 
-input[type="checkbox"] ~ span::after{
+input[type="checkbox"] ~ span::after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.checkbox-container input[type="checkbox"]:checked ~ span::after{
+.checkbox-container input[type="checkbox"]:checked ~ span::after {
   display: block;
 }
 
-.checkbox-container input[type="checkbox"] ~ span::after{
+.checkbox-container input[type="checkbox"] ~ span::after {
   display: none;
-
 }
 
-.checkbox-container input[type="checkbox"] ~ span::after{
+.checkbox-container input[type="checkbox"] ~ span::after {
   top: 50%;
   left: 30%;
   width: 7px;
@@ -341,6 +338,22 @@ input[type="checkbox"] ~ span::after{
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  transform: rotate(45deg) translate(-50%,-50%);
-  
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.input-container input[type="submit"] {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background: transparent;
+  outline: 0;
+  border: #8f8f8f solid;
+  cursor: pointer;
+  color: #8f8f8f;
+  font-size: 18px;
+}
+
+.input-container input[type="submit"]:hover {
+  color: #45f3ff;
+  border: #45f3ff solid;
 }
