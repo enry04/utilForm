@@ -69,8 +69,9 @@
                             </div>
                         </div>
                         <div class="fifth-row-container row">
-                            <div class="input-container">
+                            <div class="input-container checkbox-container">
                                 <input type="checkbox">
+                                <span></span>
                             </div>
                             <div class="input-container">
                                 <input type="submit">
