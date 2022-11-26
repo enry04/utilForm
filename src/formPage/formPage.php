@@ -21,41 +21,25 @@
                     <form method="post">
                         <div class="first-row-container row">
                             <div class="input-container">
-                                <input type="text" name="textBox" required="required" class="input-text">
+                                <input type="text" name="textBox" class="input-text" required="required">
                                 <span>text</span>
                             </div>
                             <div class="input-container">
-                                <input type="number" name="numberBox" required="required" class="input-number" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
+                                <input type="number" name="numberBox" class="input-number" required="required" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
                                 <span>number</span>
                             </div>
                         </div>
                         <div class="second-row-container row">
                             <div class="input-container">
-                                <input type="date" required="required" class="input-date">
+                                <input type="date" class="input-date" required="required">
                                 <span>date</span>
                             </div>
                             <div class="input-container">
-                                <input type="file" required="required" id="btnFile" class="input-file">
+                                <input type="file" id="btnFile" class="input-file" required="required">
                                 <span id="currentFile">Choose file</span>
                             </div>
                         </div>
                         <div class="third-row-container row">
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="1" required="required" class="input-radio">
-                                <label for="1">diksmdn</label>
-                            </div>
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="2" required="required" class="input-radio">
-                                <label for="2">diksmdn</label>
-                            </div>
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="3" required="required" class="input-radio">
-                                <label for="3">diksmdn</label>
-                            </div>
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="4" required="required" class="input-radio">
-                                <label for="4">diksmdn</label>
-                            </div>
                         </div>
                         <div class="fourth-row-container row">
                             <div class="input-container">
@@ -70,11 +54,11 @@
                         </div>
                         <div class="fifth-row-container row">
                             <div class="input-container checkbox-container">
-                                <input type="checkbox" class="input-checkBox">
+                                <input type="checkbox" class="input-checkBox" required="required">
                                 <span></span>
                             </div>
                             <div class="input-container">
-                                <input type="submit" value="conferma">
+                                <input type="submit" value="conferma" class="btn-send" required="required">
                             </div>
                         </div>
                     </form>

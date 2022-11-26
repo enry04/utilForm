@@ -2,4 +2,6 @@
 
 header("Location: src/formPage/formPage.php");
 
+die();
+
 ?>
