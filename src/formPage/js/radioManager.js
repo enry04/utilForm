@@ -25,9 +25,9 @@ class RadioManager {
   }
 
   setRadioValues(id, name){
-    console.log(id, name);
     this.elements.radio.id = id;
     this.elements.label.innerHTML = name;
+    this.elements.label.htmlFor = this.elements.radio.id;
   }
 
 }

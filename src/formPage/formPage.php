@@ -44,11 +44,6 @@
                         <div class="fourth-row-container row">
                             <div class="input-container">
                                 <select class="input-select">
-                                    <option hidden disabled></option>
-                                    <option value="1">wfvwrvwv</option>
-                                    <option value="1">dadf</option>
-                                    <option value="1">nencej</option>
-                                    <option value="1">1ìkdmekfdm</option>
                                 </select>
                             </div>
                         </div>

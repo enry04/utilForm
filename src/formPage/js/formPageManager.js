@@ -24,15 +24,17 @@ class FormPageManager {
       number: this.rootElement.querySelector(".input-number"),
       date: this.rootElement.querySelector(".input-date"),
       file: this.rootElement.querySelector(".input-file"),
-      // radiosContainer: this.rootElement.querySelector(".third-row-container"),
+      radios: this.rootElement.querySelectorAll(".input-radio"),
       select: this.rootElement.querySelector(".input-select"),
       checkBox: this.rootElement.querySelector(".input-checkBox"),
-      btnSend: this.rootElement.querySelector(".btn-send"),
+      form: this.rootElement.querySelector("form"),
     };
   }
 
   initEventListeners() {
-    this.elements.btnSend.addEventListener("click", (event) => {});
+    this.elements.form.addEventListener("submit", (event) => {
+      
+    });
   }
 
   setSelect() {}
