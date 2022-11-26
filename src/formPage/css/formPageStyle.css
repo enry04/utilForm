@@ -205,6 +205,7 @@ input[type="file"]::-webkit-file-upload-button {
   height: 40px;
   border: #8f8f8f solid;
   border-radius: 5px;
+  font-size: 13px;
 }
 
 .radio-container input[type="radio"] {

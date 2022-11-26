@@ -21,60 +21,39 @@
                     <form method="post">
                         <div class="first-row-container row">
                             <div class="input-container">
-                                <input type="text" name="textBox" required="required">
+                                <input type="text" name="textBox" class="input-text" required="required">
                                 <span>text</span>
                             </div>
                             <div class="input-container">
-                                <input type="number" name="numberBox" required="required" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
+                                <input type="number" name="numberBox" class="input-number" required="required" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
                                 <span>number</span>
                             </div>
                         </div>
                         <div class="second-row-container row">
                             <div class="input-container">
-                                <input type="date" required="required">
+                                <input type="date" class="input-date" required="required">
                                 <span>date</span>
                             </div>
                             <div class="input-container">
-                                <input type="file" required="required" id="btnFile">
+                                <input type="file" id="btnFile" class="input-file" required="required">
                                 <span id="currentFile">Choose file</span>
                             </div>
                         </div>
                         <div class="third-row-container row">
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="1" required="required">
-                                <label for="1">diksmdn</label>
-                            </div>
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="2" required="required">
-                                <label for="2">diksmdn</label>
-                            </div>
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="3" required="required">
-                                <label for="3">diksmdn</label>
-                            </div>
-                            <div class="input-container radio-container">
-                                <input type="radio" name="radio" id="4" required="required">
-                                <label for="4">diksmdn</label>
-                            </div>
                         </div>
                         <div class="fourth-row-container row">
                             <div class="input-container">
-                                <select>
-                                    <option hidden disabled></option>
-                                    <option value="1">wfvwrvwv</option>
-                                    <option value="1">dadf</option>
-                                    <option value="1">nencej</option>
-                                    <option value="1">1ìkdmekfdm</option>
+                                <select class="input-select">
                                 </select>
                             </div>
                         </div>
                         <div class="fifth-row-container row">
                             <div class="input-container checkbox-container">
-                                <input type="checkbox">
+                                <input type="checkbox" class="input-checkBox" required="required">
                                 <span></span>
                             </div>
                             <div class="input-container">
-                                <input type="submit" value="conferma">
+                                <input type="submit" value="conferma" class="btn-send" required="required">
                             </div>
                         </div>
                     </form>
@@ -82,6 +61,7 @@
             </div>
         </div>
     </main>
+    <script type ="module" src="js/formView.js"></script>
 </body>
 
 </html>
