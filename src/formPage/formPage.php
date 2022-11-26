@@ -18,7 +18,7 @@
                     <h2>Aggiungi un record</h2>
                 </div>
                 <div class="items-container">
-                    <form method="post">
+                    <form method="post" action="../mainPage/mainPage.php">
                         <div class="first-row-container row">
                             <div class="input-container">
                                 <input type="text" name="textBox" class="input-text" required="required">
