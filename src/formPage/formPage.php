@@ -35,8 +35,8 @@
                                 <span>date</span>
                             </div>
                             <div class="input-container">
-                                <input type="file" id="btnFile" class="input-file" required="required">
-                                <span id="currentFile">Choose file</span>
+                                <input type="file" class="input-file" required="required">
+                                <span id="current-file">Choose file</span>
                             </div>
                         </div>
                         <div class="third-row-container row">

@@ -27,6 +27,7 @@ class FormPageManager {
       checkBox: this.rootElement.querySelector(".input-checkBox"),
       number: this.rootElement.querySelector(".input-number"),
       file: this.rootElement.querySelector(".input-file"),
+      selectedFile: this.rootElement.querySelector("#current-file"),
       radios: this.rootElement.querySelectorAll(".input-radio"),
       select: this.rootElement.querySelector(".input-select"),
       form: this.rootElement.querySelector("form"),
@@ -34,6 +35,12 @@ class FormPageManager {
   }
 
   initEventListeners() {
+
+    this.elements.file.addEventListener("change", (event) => {
+      this.elements.selectedFile.textContent = this.elements.file.files[0].name;
+
+    });
+
     this.elements.form.addEventListener("submit", (event) => {
       var date = new Date(this.elements.date.value);
       const data = {
