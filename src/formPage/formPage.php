@@ -49,11 +49,11 @@
                         </div>
                         <div class="fifth-row-container row">
                             <div class="input-container checkbox-container">
-                                <input type="checkbox" class="input-checkBox" required="required">
+                                <input type="checkbox" class="input-checkBox">
                                 <span></span>
                             </div>
                             <div class="input-container">
-                                <input type="submit" value="conferma" class="btn-send" required="required">
+                                <input type="submit" value="conferma" class="btn-send">
                             </div>
                         </div>
                     </form>
