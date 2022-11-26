@@ -136,12 +136,17 @@ input[type="text"]:focus ~ span,
 input[type="number"]:valid ~ span,
 input[type="number"]:focus ~ span,
 input[type="date"]:focus ~ span,
-input[type="date"]:valid ~ span,
-input[type="file"]:focus ~ span,
-input[type="file"]:valid ~ span {
+input[type="date"]:valid ~ span {
   color: #45f3ff;
   transform: translateY(-40px);
   font-size: 0.75em;
+}
+
+input[type="file"]:focus ~ span,
+input[type="file"]:valid ~ span{
+  color: #45f3ff;
+  text-align: center;
+  font-size: 0.85em;
 }
 
 input[type="text"]:valid,
