@@ -9,7 +9,7 @@ $json = file_get_contents("php://input");
 $data = json_decode($json);
 
 $testo = $data->text;
-$data = $data->date;
+$date = $data->date;
 $camposn = $data->checkBox;
 $numero = $data->number;
 $percorso = $data->file;
@@ -20,7 +20,7 @@ $result = null;
 try {
 
     $query = $pdo->prepare("INSERT INTO tabella (testo,data,camposn,numero,percorso,idSupporto,idRadioet) VALUES (:testo,:data,:camposn,:numero,:percorso,:idSupporto,:idRadioet)");
-    $query->execute(['testo' => $testo, 'data' => $data, 'camposn' => $camposn, 'numero' => $numero, 'percorso' => $percorso, 'idSupporto' => $idSupporto, 'idRadioet' => $idRadioet]);
+    $query->execute(['testo' => $testo, 'data' => $date, 'camposn' => $camposn, 'numero' => $numero, 'percorso' => $percorso, 'idSupporto' => $idSupporto, 'idRadioet' => $idRadioet]);
     $result = array(
         'data' => null,
         'status' => "success",

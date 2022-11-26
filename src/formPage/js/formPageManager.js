@@ -23,29 +23,28 @@ class FormPageManager {
   initElements() {
     this.elements = {
       text: this.rootElement.querySelector(".input-text"),
-      number: this.rootElement.querySelector(".input-number"),
       date: this.rootElement.querySelector(".input-date"),
+      checkBox: this.rootElement.querySelector(".input-checkBox"),
+      number: this.rootElement.querySelector(".input-number"),
       file: this.rootElement.querySelector(".input-file"),
       radios: this.rootElement.querySelectorAll(".input-radio"),
       select: this.rootElement.querySelector(".input-select"),
-      checkBox: this.rootElement.querySelector(".input-checkBox"),
       form: this.rootElement.querySelector("form"),
     };
   }
 
   initEventListeners() {
     this.elements.form.addEventListener("submit", (event) => {
+      var date = new Date(this.elements.date.value);
       const data = {
-        text: this.elements.text.value,
-        number: this.elements.number.value,
-        date: this.elements.date.value,
-        file: this.elements.file.value,
-        idRadio: this.getSelectedRadio(),
-        idSelect: this.elements.select.value,
-        checkBox: this.getCheckBoxValue(),
+        'text': this.elements.text.value,
+        'date': date.toISOString().slice(0, 19).replace('T', ' '),
+        'checkBox': this.getCheckBoxValue(),
+        'number': parseInt(this.elements.number.value),
+        'file': this.elements.file.value,
+        'idRadio': parseInt(this.getSelectedRadio()),
+        'idSelect': parseInt(this.elements.select.value),
       };
-
-      debugger;
 
       FetchManager.postData("../formPage/php/insertFormValues.php", data).then(
         (response) => {
@@ -56,7 +55,7 @@ class FormPageManager {
   }
 
   getCheckBoxValue() {
-    if (this.elements.checkBox.value == "on") {
+    if (this.elements.checkBox.checked == true) {
       return "1";
     } else {
       return "0";
