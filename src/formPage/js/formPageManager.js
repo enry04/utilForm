@@ -55,9 +55,12 @@ class FormPageManager {
 
       FetchManager.postData("../formPage/php/insertFormValues.php", data).then(
         (response) => {
-          console.log(response);
+          if(response.status == "success") {
+            location.href = "../mainPage/mainPage.php";
+          }
         }
       );
+     
     });
   }
 
