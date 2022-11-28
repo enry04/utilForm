@@ -146,3 +146,8 @@ table td{
   color: #45f3ff;
   border: #45f3ff solid 2px;
 }
+
+.remove-btn:hover{
+  color: red;
+  border: red solid 2px;
+}
