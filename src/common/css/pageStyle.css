@@ -10,4 +10,5 @@ body,html{
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }

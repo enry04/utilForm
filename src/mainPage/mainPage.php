@@ -20,7 +20,7 @@
             <input type="submit" value="Conferma">
         </form>
         <a href="../formPage/formPage.php">
-            <input type="button" value="Aggiungi record">
+            <input type="button" value="Aggiungi record" class="add-record-btn">
         </a>
     </div>
 
@@ -29,16 +29,16 @@
             <table>
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>testo</th>
-                        <th>data</th>
-                        <th>camposn</th>
-                        <th>numero</th>
-                        <th>percorso</th>
-                        <th>idSupporto</th>
-                        <th>idRadioet</th>
-                        <th>modifica</th>
-                        <th>elimina</th>
+                        <th>Id</th>
+                        <th>Testo</th>
+                        <th>Data</th>
+                        <th>Camposn</th>
+                        <th>Numero</th>
+                        <th>Percorso</th>
+                        <th>IdSupporto</th>
+                        <th>IdRadioet</th>
+                        <th>Modifica</th>
+                        <th>Elimina</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,8 +51,8 @@
                         <td>C:/djnd/dshdb/djsdn</td>
                         <td>1</td>
                         <td>4</td>
-                        <td>modifica</td>
-                        <td>elimina</td>
+                        <td><input type="button" value="modifica" class="modify-btn"></td>
+                        <td><input type="button" value="elimina" class="remove-btn"></td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -63,8 +63,20 @@
                         <td>C:/djnd/dshdb/djsdn</td>
                         <td>1</td>
                         <td>4</td>
-                        <td>modifica</td>
-                        <td>elimina</td>
+                        <td><input type="button" value="modifica"class="modify-btn"></td>
+                        <td><input type="button" value="elimina" class="remove-btn"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ssdsd</td>
+                        <td>323/32/3232</td>
+                        <td>1</td>
+                        <td>34344</td>
+                        <td>C:/djnd/dshdb/djsdn</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td><input type="button" value="modifica"class="modify-btn"></td>
+                        <td><input type="button" value="elimina" class="remove-btn"></td>
                     </tr>
                 </tbody>
             </table>
