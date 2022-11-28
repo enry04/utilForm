@@ -16,8 +16,8 @@
     </div>
     <div class="search-add-container">
         <form method="post">
-            <input type="text" placeholder="Cerca record..." required="required">
-            <input type="submit" value="Conferma">
+            <input type="text" placeholder="Cerca record..." required="required" class="search-text">
+            <input type="submit" value="Conferma" class="confirm-btn">
         </form>
         <a href="../formPage/formPage.php">
             <input type="button" value="Aggiungi record" class="add-record-btn">
@@ -82,6 +82,7 @@
             </table>
         </div>
     </main>
+    <script type="module" src="js/mainView.js"></script>
 </body>
 
 </html>
