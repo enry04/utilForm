@@ -40,7 +40,7 @@ input[type="text"]:focus::placeholder {
   color: #45f3ff;
 }
 
-input[type="submit"]{
+.confirm-btn{
   width: 100px;
   cursor: pointer;
   color: #8f8f8f;
@@ -48,7 +48,7 @@ input[type="submit"]{
 
 input[type="text"],
 .add-record-btn,
-input[type="submit"] {
+.confirm-btn {
   border: #8f8f8f solid;
   border-radius: 10px;
   background: transparent;
@@ -65,7 +65,7 @@ input[type="submit"] {
 }
 
 .add-record-btn:hover,
-input[type="submit"]:hover{
+.confirm-btn:hover{
     border: #45f3ff solid;
     color: #45f3ff;
     box-shadow: 0px 15px 20px rgba(19, 178, 183, 0.378);
@@ -150,4 +150,11 @@ table td{
 .remove-btn:hover{
   color: red;
   border: red solid 2px;
+}
+
+.not-found-text{
+  color: red;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
 }

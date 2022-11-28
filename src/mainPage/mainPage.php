@@ -15,10 +15,8 @@
         <h1 class="title-name">Backoffice</h1>
     </div>
     <div class="search-add-container">
-        <form method="post">
             <input type="text" placeholder="Cerca record..." required="required" class="search-text">
-            <input type="submit" value="Conferma" class="confirm-btn">
-        </form>
+            <input type="button" value="Conferma" class="confirm-btn">
         <a href="../formPage/formPage.php">
             <input type="button" value="Aggiungi record" class="add-record-btn">
         </a>

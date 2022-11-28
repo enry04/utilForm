@@ -10,7 +10,7 @@ $data = json_decode($json);
 
 $currentSearch = $data->currentSearch;
 
-$query = $pdo->prepare("SELECT * FROM tabella WHERE testo =:currentSearch");
+$query = $pdo->prepare("SELECT * FROM tabella WHERE testo=:currentSearch");
 $query->execute(['currentSearch' => $currentSearch]);
 $dataList = $query->fetchAll();
 $result = null;
@@ -27,6 +27,6 @@ if($dataList != null){
     );
 }
 
-echo json_encode($dataList);
+echo json_encode($result);
 
 ?>
