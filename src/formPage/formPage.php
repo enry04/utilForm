@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+    <div class="go-back-container"></div>
     <main>
         <div class="main-container">
             <div class="form-container">
@@ -18,7 +20,7 @@
                     <h2>Aggiungi un record</h2>
                 </div>
                 <div class="items-container">
-                    <form method="post" action="../mainPage/mainPage.php">
+                    <form method="post">
                         <div class="first-row-container row">
                             <div class="input-container">
                                 <input type="text" name="textBox" class="input-text" required="required">
@@ -34,7 +36,7 @@
                                 <input type="date" class="input-date" required="required">
                                 <span>date</span>
                             </div>
-                            <div class="input-container">
+                            <div class="file-container input-container">
                                 <input type="file" class="input-file" required="required">
                                 <span id="current-file">Choose file</span>
                             </div>
@@ -62,6 +64,13 @@
         </div>
     </main>
     <script type ="module" src="js/formView.js"></script>
+    <div id="popup1" class="popup-overlay">
+	<div class="popup-container">
+        <h1>godo</h1>
+		<a class="close" href="#">&times;</a>
+        <h2 class="popup-content"></h2>
+	</div>
+</div>
 </body>
 
 </html>

@@ -7,6 +7,18 @@ body {
   min-height: 610px;
 }
 
+.go-back-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 165px;
+  height: 76px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center, 50%, 50%;
+  background: url("../../common/images/go-back-icon.svg");
+}
+
 .main-container {
   border-radius: 10px;
   position: relative;
@@ -108,12 +120,20 @@ input[type="file"] {
   color: aliceblue;
 }
 
+input[type="file"] {
+  border: #8f8f8f solid;
+}
+
 input[type="text"]:hover,
 input[type="number"]:hover,
 input[type="date"]:hover,
 input[type="file"]:hover {
   border-bottom: #45f3ff solid;
   border-radius: 5px;
+}
+
+input[type="file"]:hover {
+  border: #45f3ff solid;
 }
 
 .input-container {
@@ -142,8 +162,19 @@ input[type="date"]:valid ~ span {
   font-size: 0.75em;
 }
 
+.file-container span {
+  font-size: 1em;
+  color: #8f8f8f;
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 input[type="file"]:focus ~ span,
-input[type="file"]:valid ~ span{
+input[type="file"]:valid ~ span {
   color: #45f3ff;
   text-align: center;
   font-size: 0.85em;
@@ -174,7 +205,7 @@ input::-webkit-inner-spin-button {
 }
 
 .input-container input[type="date"],
-.input-container input[type="file"] {
+.file-container input[type="file"] {
   color: transparent;
   text-align: center;
   font-size: 17px;
