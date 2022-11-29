@@ -26,57 +26,7 @@
         <div class="table-container">
             <table>
                 <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Testo</th>
-                        <th>Data</th>
-                        <th>Camposn</th>
-                        <th>Numero</th>
-                        <th>Percorso</th>
-                        <th>IdSupporto</th>
-                        <th>IdRadioet</th>
-                        <th>Modifica</th>
-                        <th>Elimina</th>
-                    </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>ssdsd</td>
-                        <td>323/32/3232</td>
-                        <td>1</td>
-                        <td>434343</td>
-                        <td>C:/djnd/dshdb/djsdn</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td><input type="button" value="modifica" class="modify-btn"></td>
-                        <td><input type="button" value="elimina" class="remove-btn"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>ssdsd</td>
-                        <td>323/32/3232</td>
-                        <td>1</td>
-                        <td>34344</td>
-                        <td>C:/djnd/dshdb/djsdn</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td><input type="button" value="modifica"class="modify-btn"></td>
-                        <td><input type="button" value="elimina" class="remove-btn"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>ssdsd</td>
-                        <td>323/32/3232</td>
-                        <td>1</td>
-                        <td>34344</td>
-                        <td>C:/djnd/dshdb/djsdn</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td><input type="button" value="modifica"class="modify-btn"></td>
-                        <td><input type="button" value="elimina" class="remove-btn"></td>
-                    </tr>
-                </tbody>
             </table>
         </div>
     </main>

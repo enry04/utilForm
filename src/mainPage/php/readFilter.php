@@ -8,9 +8,9 @@ $pdo = $connection->getConnection();
 $json = file_get_contents("php://input");
 $data = json_decode($json);
 
-$currentSearch = $data->currentSearch;
+$currentSearch = "%". $data->currentSearch ."%";
 
-$query = $pdo->prepare("SELECT * FROM tabella WHERE testo=:currentSearch");
+$query = $pdo->prepare("SELECT * FROM tabella WHERE testo LIKE :currentSearch");
 $query->execute(['currentSearch' => $currentSearch]);
 $dataList = $query->fetchAll();
 $result = null;

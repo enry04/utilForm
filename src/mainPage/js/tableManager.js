@@ -1,23 +1,75 @@
-class TableManager{
+import FetchManager from "../../common/js/fetchManager.js";
 
-    constructor(parentElement){
-        this.rootElement = parentElement;
-        this.elements = {};
+class TableManager {
+  constructor(parentElement) {
+    this.rootElement = parentElement;
+    this.row = null;
+    this.N_ATTRIBUTES = 10;
+    this.btns = {};
+    this.currentId = null;
+  }
+
+  init() {
+    this.initElements();
+    this.initEventsListener();
+  }
+
+  initElements() {
+    this.row = document.createElement("tr");
+
+    for (let i = 0; i < this.N_ATTRIBUTES; i++) {
+      let tableCell = document.createElement("td");
+      if (i == 8) {
+        let inputElement = document.createElement("input");
+        inputElement.setAttribute("type", "button");
+        inputElement.setAttribute("value", "modifica");
+        inputElement.setAttribute("class", "modify-btn");
+        tableCell.appendChild(inputElement);
+      } else if (i == 9) {
+        let inputElement = document.createElement("input");
+        inputElement.setAttribute("type", "button");
+        inputElement.setAttribute("value", "elimina");
+        inputElement.setAttribute("class", "remove-btn");
+        tableCell.appendChild(inputElement);
+      }
+      this.row.appendChild(tableCell);
     }
 
-    init(){
-        this.initElements();
-        this.initEventsListener();
+    this.btns = {
+      btnModify: this.row.querySelector(".modify-btn"),
+      btnRemove: this.row.querySelector(".remove-btn"),
     }
 
-    initElements(){
+    console.log(this.btns);
 
+    this.rootElement.appendChild(this.row);
+  }
+  initEventsListener() {
+
+    this.btns.btnRemove.addEventListener("click", (event) => {
+        const data = {
+          currentId: parseInt(this.currentId), 
+        }
+        FetchManager.postData("../mainPage/php/removeElement.php",data).then((response) => {
+            console.log(response);
+        });
+        this.row.remove();
+    });
+
+    this.btns.btnModify.addEventListener("click", (event) => {
+
+      
+
+    });
+  }
+
+  setData(id, testo, data, camposn, numero, percorso, idSupporto, Idradioet) {
+    let values = [id,testo,data,camposn,numero,percorso,idSupporto,Idradioet];
+    for (let i = 0; i < this.row.childNodes.length - 2; i++) {
+        this.row.childNodes[i].innerHTML = values[i];
     }
-
-    initEventsListener(){
-        
-    }
-
+    this.currentId = id;
+  }
 }
 
 export default TableManager;
