@@ -66,9 +66,8 @@
     <script type ="module" src="js/formView.js"></script>
     <div id="popup1" class="popup-overlay">
 	<div class="popup-container">
-        <h1>godo</h1>
-		<a class="close" href="#">&times;</a>
-        <h2 class="popup-content"></h2>
+    <h2 class="popup-content"></h2>
+	<a class="close" href="#">&times;</a>
 	</div>
 </div>
 </body>

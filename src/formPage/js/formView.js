@@ -44,3 +44,8 @@ selectData.forEach((optionValue) => {
 const formParentElement = document.querySelector(".items-container");
 const formPageManager = new FormPageManager(formParentElement);
 formPageManager.init();
+
+const goBackElement = document.querySelector(".go-back-container");
+goBackElement.addEventListener("click", (event) => {
+  location.href = "../mainPage/mainPage.php";
+});
