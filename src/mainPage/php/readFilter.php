@@ -10,7 +10,7 @@ $data = json_decode($json);
 
 $currentSearch = "%". $data->currentSearch ."%";
 
-$query = $pdo->prepare("SELECT * FROM tabella WHERE testo LIKE :currentSearch");
+$query = $pdo->prepare("SELECT tabella.id, testo, data, camposn, numero, percorso, supporto.etichetta AS supportoEtichetta, radioet.etichetta AS radioetEtichetta FROM tabella INNER JOIN supporto ON tabella.idSupporto = supporto.id INNER JOIN radioet ON tabella.idRadioet = radioet.id WHERE testo LIKE :currentSearch");
 $query->execute(['currentSearch' => $currentSearch]);
 $dataList = $query->fetchAll();
 $result = null;

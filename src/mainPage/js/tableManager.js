@@ -63,8 +63,8 @@ class TableManager {
     });
   }
 
-  setData(id, testo, data, camposn, numero, percorso, idSupporto, Idradioet) {
-    let values = [id,testo,data,camposn,numero,percorso,idSupporto,Idradioet];
+  setData(id, testo, data, camposn, numero, percorso, supporto, radioet) {
+    let values = [id,testo,data,camposn,numero,percorso,supporto,radioet];
     for (let i = 0; i < this.row.childNodes.length - 2; i++) {
         this.row.childNodes[i].innerHTML = values[i];
     }

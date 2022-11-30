@@ -24,7 +24,9 @@ html {
   right: 0;
   visibility: hidden;
   opacity: 0;
-  transition: all 2s;
+  transition: all 1s;
+  background-color: #23242a;
+  z-index: 101;
 }
 
 .popup-container {
@@ -35,20 +37,25 @@ html {
   position: relative;
 }
 
-.popup .close {
+.close-popup {
+  color: #aaaaaa;
   position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
+  right: 5px;
+  top: 5px;
+  font-size: 28px;
   font-weight: bold;
-  text-decoration: none;
-  color: #333;
 }
-.popup .close:hover {
+
+.close-popup:hover,
+.close-popup:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* .popup .close:hover {
   color: #06d85f;
 }
 .popup .content {
   max-height: 30%;
   overflow: auto;
-}
+} */

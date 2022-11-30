@@ -13,6 +13,7 @@ body {
   left: 40px;
   width: 165px;
   height: 76px;
+  z-index: 102;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center, 50%, 50%;
