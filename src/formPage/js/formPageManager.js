@@ -1,10 +1,10 @@
 import FetchManager from "../../common/js/fetchManager.js";
-
+import PopupManager from "../../common/js/popupManager.js";
 class FormPageManager {
   constructor(parentElement) {
     this.rootElement = parentElement;
     this.elements = {};
-
+    this.popupManager = new PopupManager(document.querySelector(".popup-overlay"));
     const parser = new DOMParser();
     const radioTemplateString =
       '<div class="input-container radio-container"><input type="radio" name="radio" class="input-radio" required="required"><label class="radio-label"></label></div>';
@@ -42,6 +42,7 @@ class FormPageManager {
     });
 
     this.elements.form.addEventListener("submit", (event) => {
+      event.preventDefault();
       var date = new Date(this.elements.date.value);
       const data = {
         'text': this.elements.text.value,
@@ -56,7 +57,14 @@ class FormPageManager {
       FetchManager.postData("../formPage/php/insertFormValues.php", data).then(
         (response) => {
           if(response.status == "success") {
-            location.href = "../mainPage/mainPage.php";
+            this.elements.text.value = "";
+            this.elements.date.value = "";
+            this.elements.checkBox.checked = false;
+            this.elements.number.value = "";
+            this.elements.file.value = "";
+            this.elements.selectedFile.textContent = "Choose file";
+            this.uncheckRadio();
+            this.popupManager.showPopup("Record aggiunto con successo","#3AE51B");
           }
         }
       );
@@ -76,6 +84,13 @@ class FormPageManager {
     for (let i = 0; i < this.elements.radios.length; i++) {
       if (this.elements.radios[i].checked) {
         return this.elements.radios[i].id;
+      }
+    }
+  }
+  uncheckRadio(){
+    for (let i = 0; i < this.elements.radios.length; i++) {
+      if (this.elements.radios[i].checked) {
+         this.elements.radios[i].checked = false;
       }
     }
   }

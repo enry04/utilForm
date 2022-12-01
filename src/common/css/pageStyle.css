@@ -1,13 +1,56 @@
-*, ::after, ::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body,html{
-    background: #23242A;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
+body,
+html {
+  background: #23242a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+  background-color: #23242a;
+  z-index: 101;
+}
+
+.popup-container {
+  margin: 70px auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+
+.close-popup {
+  color: black;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+

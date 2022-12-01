@@ -1,10 +1,10 @@
 # utilForm
-Testo -> input text v
-Data -> input date v
+Testo -> input text 
+Data -> input date 
 Campson -> input checkbox
-Numero -> input number v
+Numero -> input number 
 Percorso -> input file
-Supporto -> input select v
+Supporto -> input select 
 Radioet -> input radio
 Tabella support no modifiche. 
 Inserire cancellare modificare record.

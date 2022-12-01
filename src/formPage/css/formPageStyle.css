@@ -7,6 +7,20 @@ body {
   min-height: 610px;
 }
 
+.go-back-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 165px;
+  height: 76px;
+  z-index: 102;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center, 50%, 50%;
+  background: url("../../common/images/go-back-icon.svg");
+  cursor: pointer;
+}
+
 .main-container {
   border-radius: 10px;
   position: relative;
@@ -107,7 +121,6 @@ input[type="file"] {
   font-size: 15px;
   color: aliceblue;
 }
-
 input[type="text"]:hover,
 input[type="number"]:hover,
 input[type="date"]:hover,
@@ -142,8 +155,19 @@ input[type="date"]:valid ~ span {
   font-size: 0.75em;
 }
 
+.file-container span {
+  font-size: 1em;
+  color: #8f8f8f;
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 input[type="file"]:focus ~ span,
-input[type="file"]:valid ~ span{
+input[type="file"]:valid ~ span {
   color: #45f3ff;
   text-align: center;
   font-size: 0.85em;
@@ -174,7 +198,7 @@ input::-webkit-inner-spin-button {
 }
 
 .input-container input[type="date"],
-.input-container input[type="file"] {
+.file-container input[type="file"] {
   color: transparent;
   text-align: center;
   font-size: 17px;
@@ -208,7 +232,6 @@ input[type="file"]::-webkit-file-upload-button {
   float: left;
   width: 100px;
   height: 40px;
-  border: #8f8f8f solid;
   border-radius: 5px;
   font-size: 13px;
 }
@@ -226,7 +249,6 @@ input[type="file"]::-webkit-file-upload-button {
 
 .radio-container label {
   color: #8f8f8f;
-  display: block;
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -235,14 +257,15 @@ input[type="file"]::-webkit-file-upload-button {
   line-height: 36px;
   border-radius: 5px;
   z-index: 90;
+  border: #8f8f8f solid;
 }
 
 .radio-container input[type="radio"] {
   opacity: 0.011;
 }
 
-.radio-container:hover {
-  border: #45f3ff solid;
+.input-container input[type="radio"]:hover + label{
+  border: #45f3ff solid 1px;
 }
 
 .input-container input[type="radio"]:checked + label {
