@@ -64,7 +64,7 @@ class FormPageManager {
             this.elements.file.value = "";
             this.elements.selectedFile.textContent = "Choose file";
             this.uncheckRadio();
-            this.PopupManager.showPopup("Record aggiunto con successo","green");
+            this.PopupManager.showPopup("Record aggiunto con successo","#3AE51B");
           }
         }
       );

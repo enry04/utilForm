@@ -34,11 +34,12 @@ html {
   padding: 20px;
   border-radius: 5px;
   width: 30%;
+  text-align: center;
   position: relative;
 }
 
 .close-popup {
-  color: #aaaaaa;
+  color: black;
   position: absolute;
   right: 5px;
   top: 5px;
@@ -48,14 +49,8 @@ html {
 
 .close-popup:hover,
 .close-popup:focus {
-  color: #000;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }
-/* .popup .close:hover {
-  color: #06d85f;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-} */
+
