@@ -11,7 +11,7 @@ body {
   position: absolute;
   top: 40px;
   left: 40px;
-  width: 165px;
+  width: 65px;
   height: 76px;
   z-index: 102;
   background-repeat: no-repeat;
@@ -264,7 +264,7 @@ input[type="file"]::-webkit-file-upload-button {
   opacity: 0.011;
 }
 
-.input-container input[type="radio"]:hover + label{
+.input-container input[type="radio"]:hover + label {
   border: #45f3ff solid 1px;
 }
 

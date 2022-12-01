@@ -1,5 +1,4 @@
 import FetchManager from "../../common/js/fetchManager.js";
-import FormPageManager from "./formPageManager.js";
 import RadioManager from "../../common/js/radioManager.js";
 import SelectManager from "../../common/js/selectManager.js";
 
@@ -41,9 +40,9 @@ selectData.forEach((optionValue) => {
   selectManager.setOptionValues(optionValue["id"], optionValue["etichetta"]);
 });
 
-const formParentElement = document.querySelector(".items-container");
-const formPageManager = new FormPageManager(formParentElement);
-formPageManager.init();
+// const formParentElement = document.querySelector(".items-container");
+// const formPageManager = new FormPageManager(formParentElement);
+// formPageManager.init();
 
 const goBackElement = document.querySelector(".go-back-container");
 goBackElement.addEventListener("click", (event) => {

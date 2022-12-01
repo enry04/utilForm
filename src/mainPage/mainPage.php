@@ -31,11 +31,9 @@
         </div>
     </main>
     <script type="module" src="js/mainView.js"></script>
-    <div class="popup-overlay">
-	<div class="popup-container">
-    <h2 class="popup-content"></h2>
-    <span class="close-popup">&times;</span>
-	</div>
+    <?php
+    require("../common/php/popupTemplate.php");
+    ?>
 </body>
 
 </html>
