@@ -125,6 +125,10 @@ table th:last-child{
   color: red;
 }
 
+table th:nth-of-type(9){
+  color: #3ADC1D;
+}
+
 table td{
   color: aliceblue;
   font-size: 20px;
@@ -143,8 +147,8 @@ table td{
 }
 
 .modify-btn:hover{
-  color: #45f3ff;
-  border: #45f3ff solid 2px;
+  color: #3ADC1D;
+  border: #3ADC1D solid 2px;
 }
 
 .remove-btn:hover{

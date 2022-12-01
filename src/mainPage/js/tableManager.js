@@ -1,4 +1,5 @@
 import FetchManager from "../../common/js/fetchManager.js";
+import PopupManager from "../../common/js/popupManager.js";
 
 class TableManager {
   constructor(parentElement) {
@@ -7,6 +8,9 @@ class TableManager {
     this.N_ATTRIBUTES = 10;
     this.btns = {};
     this.currentId = null;
+    this.popupManager = new PopupManager(
+      document.querySelector(".popup-overlay")
+    );
   }
 
   init() {
@@ -38,35 +42,48 @@ class TableManager {
     this.btns = {
       btnModify: this.row.querySelector(".modify-btn"),
       btnRemove: this.row.querySelector(".remove-btn"),
-    }
+    };
 
     console.log(this.btns);
 
     this.rootElement.appendChild(this.row);
   }
   initEventsListener() {
-
     this.btns.btnRemove.addEventListener("click", (event) => {
-        const data = {
-          currentId: parseInt(this.currentId), 
+      this.popupManager.showPopup("Record eliminato con successo", "red");
+      const data = {
+        currentId: parseInt(this.currentId),
+      };
+      FetchManager.postData("../mainPage/php/removeElement.php", data).then(
+        (response) => {
+          console.log(response);
         }
-        FetchManager.postData("../mainPage/php/removeElement.php",data).then((response) => {
-            console.log(response);
-        });
-        this.row.remove();
+      );
+      this.row.remove();
     });
 
     this.btns.btnModify.addEventListener("click", (event) => {
-
-      
-
+      if(this.btns.btnModify.value == "modifica"){
+        this.btns.btnModify.value = "conferma";
+      }else{
+        this.btns.btnModify.value = "modifica";
+      }
     });
   }
 
   setData(id, testo, data, camposn, numero, percorso, supporto, radioet) {
-    let values = [id,testo,data,camposn,numero,percorso,supporto,radioet];
+    let values = [
+      id,
+      testo,
+      data,
+      camposn,
+      numero,
+      percorso,
+      supporto,
+      radioet,
+    ];
     for (let i = 0; i < this.row.childNodes.length - 2; i++) {
-        this.row.childNodes[i].innerHTML = values[i];
+      this.row.childNodes[i].innerHTML = values[i];
     }
     this.currentId = id;
   }

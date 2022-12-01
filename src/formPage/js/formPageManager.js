@@ -4,7 +4,7 @@ class FormPageManager {
   constructor(parentElement) {
     this.rootElement = parentElement;
     this.elements = {};
-    this.PopupManager = new PopupManager(document.querySelector(".popup-overlay"));
+    this.popupManager = new PopupManager(document.querySelector(".popup-overlay"));
     const parser = new DOMParser();
     const radioTemplateString =
       '<div class="input-container radio-container"><input type="radio" name="radio" class="input-radio" required="required"><label class="radio-label"></label></div>';
@@ -64,7 +64,7 @@ class FormPageManager {
             this.elements.file.value = "";
             this.elements.selectedFile.textContent = "Choose file";
             this.uncheckRadio();
-            this.PopupManager.showPopup("Record aggiunto con successo","#3AE51B");
+            this.popupManager.showPopup("Record aggiunto con successo","#3AE51B");
           }
         }
       );

@@ -12,7 +12,7 @@ notFoundText.classList.add("not-found-text");
 document.querySelector("body").appendChild(notFoundText);
 notFoundText.style.display = "none";
 let tableData = null;
-const headerValues = ["Id", "Testo", "Data", "Camposn", "Numero", "Percorso", "Supporto", "Radioet", "modifica", "elimina"];
+const headerValues = ["Id", "Testo", "Data", "Camposn", "Numero", "Percorso", "Supporto", "Radioet", "Modifica", "Elimina"];
 
 btnConfirm.addEventListener("click", (event) => {
   if ((textBar.value != null) & (textBar.value != "")) {
