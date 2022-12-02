@@ -63,7 +63,9 @@ class TableManager {
     });
 
     this.btns.btnModify.addEventListener("click", (event) => {
-      location.href = "../modifyFormPage/modifyFormPage.php";
+      let valuesToSend = new URLSearchParams();
+      valuesToSend.append("idElement", this.row.firstChild.textContent);
+      location.href = "../modifyFormPage/modifyFormPage.php?" + valuesToSend.toString();
     });
   }
 

@@ -3,7 +3,7 @@
         <div class="main-container">
             <div class="form-container">
                 <div class="top-container">
-                    <h2>Aggiungi un record</h2>
+                    <h2 class="title-text"></h2>
                 </div>
                 <div class="items-container">
                     <form method="post">

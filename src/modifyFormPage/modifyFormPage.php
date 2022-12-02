@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>backoffice</title>
     <link rel="stylesheet" href="../common/css/pageStyle.css">
-    <link rel="stylesheet" href="../common//css//formSyle.css">
+    <link rel="stylesheet" href="../common/css/formStyle.css">
 </head>
 
 <body>

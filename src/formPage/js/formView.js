@@ -7,7 +7,7 @@ const radioParentElement = document.querySelector(".third-row-container");
 const data = {};
 let radioData;
 
-await FetchManager.postData("../formPage/php/readRadio.php", data).then(
+await FetchManager.postData("../common/php/readRadio.php", data).then(
   (response) => {
     if (response.status == "success") {
       radioData = JSON.parse(response.data);
@@ -26,7 +26,7 @@ radioData.forEach((radioValue) => {
 const selectParentElement = document.querySelector(".input-select");
 let selectData;
 
-await FetchManager.postData("../formPage/php/readSelect.php", data).then(
+await FetchManager.postData("../common/php/readSelect.php", data).then(
   (response) => {
     if (response.status == "success") {
       selectData = JSON.parse(response.data);
@@ -41,6 +41,8 @@ selectData.forEach((optionValue) => {
   selectManager.setOptionValues(optionValue["id"], optionValue["etichetta"]);
 });
 
+const titleText = document.querySelector(".title-text");
+titleText.textContent = "Aggiungi record";
 const formParentElement = document.querySelector(".items-container");
 const formPageManager = new FormPageManager(formParentElement);
 formPageManager.init();

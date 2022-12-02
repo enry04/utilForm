@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center, 50%, 50%;
-  background: url("../../common/images/go-back-icon.svg");
+  background: url("../images/go-back-icon.svg");
   cursor: pointer;
 }
 
