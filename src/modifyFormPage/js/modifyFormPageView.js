@@ -1,6 +1,7 @@
 import FetchManager from "../../common/js/fetchManager.js";
 import RadioManager from "../../common/js/radioManager.js";
 import SelectManager from "../../common/js/selectManager.js";
+import ModifyFormPageManager from "./modifyFormPageManager.js";
 
 const radioParentElement = document.querySelector(".third-row-container");
 let data = {};
@@ -45,22 +46,20 @@ titleText.textContent = "Modifica record";
 
 let dataToReceive = new URLSearchParams(window.location.search);
 data = {
-  'currentElementId': dataToReceive.get("idElement"),
-}
+  currentElementId: dataToReceive.get("idElement"),
+};
 
-await FetchManager.postData("../modifyFormPage/php/readElement.php", data).then((response) => {
-
-  // if(response.status == "success") {
-
-  // }else{
-  //   console.log(response.status);
-  // }
-  console.log(response);
-});
-
-// const formParentElement = document.querySelector(".items-container");
-// const formPageManager = new FormPageManager(formParentElement);
-// formPageManager.init();
+await FetchManager.postData("../modifyFormPage/php/readElement.php", data).then(
+  (response) => {
+    if (response.status == "success") {
+      const formParentElement = document.querySelector(".items-container");
+      const modifyFormPageManager = new ModifyFormPageManager(formParentElement, JSON.parse(response.data));
+      modifyFormPageManager.init();
+    } else {
+      console.log(response.status);
+    }
+  }
+);
 
 const goBackElement = document.querySelector(".go-back-container");
 goBackElement.addEventListener("click", (event) => {
