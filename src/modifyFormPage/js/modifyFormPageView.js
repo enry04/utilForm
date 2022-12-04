@@ -66,5 +66,6 @@ await FetchManager.postData("../modifyFormPage/php/readElement.php", data).then(
 
 const goBackElement = document.querySelector(".go-back-container");
 goBackElement.addEventListener("click", (event) => {
+  console.log("fdfs");
   location.href = "../mainPage/mainPage.php";
 });

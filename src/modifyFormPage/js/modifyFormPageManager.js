@@ -31,7 +31,7 @@ class FormPageManager {
       checkBox: this.rootElement.querySelector(".input-checkBox"),
       number: this.rootElement.querySelector(".input-number"),
       file: this.rootElement.querySelector(".input-file"),
-      selectedFile: this.rootElement.querySelector("#current-file"),
+      selectedFile: this.rootElement.querySelector(".current-file"),
       radios: this.rootElement.querySelectorAll(".input-radio"),
       select: this.rootElement.querySelector(".input-select"),
       form: this.rootElement.querySelector("form"),

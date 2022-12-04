@@ -1,16 +1,14 @@
 import TableManager from "./tableManager.js";
 import FetchManager from "../../common/js/fetchManager.js";
+import PopupManager from "../../common/js/popupManager.js";
 
+const popupManager = new PopupManager(document.querySelector(".popup-overlay"));
 const searchBarParent = document.querySelector(".search-add-container");
 const textBar = searchBarParent.querySelector(".search-text");
 const btnConfirm = searchBarParent.querySelector(".confirm-btn");
 const parentElement = document.querySelector(".table-container");
 const tableElement = document.querySelector("table");
 parentElement.style.display = "none";
-let notFoundText = document.createElement("h1");
-notFoundText.classList.add("not-found-text");
-document.querySelector("body").appendChild(notFoundText);
-notFoundText.style.display = "none";
 let tableData = null;
 const headerValues = [
   "Id",
@@ -35,7 +33,6 @@ btnConfirm.addEventListener("click", (event) => {
         if (response.status == "success") {
           tableElement.innerHTML = "";
           parentElement.style.display = "flex";
-          notFoundText.style.display = "none";
           tableData = JSON.parse(response.data);
           let tHead = tableElement.createTHead();
           let row = tHead.insertRow();
@@ -60,16 +57,12 @@ btnConfirm.addEventListener("click", (event) => {
             );
           });
         } else {
-          parentElement.style.display = "none";
-          notFoundText.style.display = "block";
-          notFoundText.innerText = "Nessun record presente";
+          popupManager.showPopup("Nessun risultato trovato", "red");
           console.log(response);
         }
       }
     );
   } else {
-    parentElement.style.display = "none";
-    notFoundText.style.display = "block";
-    notFoundText.textContent = "Inserisci qualcosa";
+    popupManager.showPopup("Inserisci qualcosa", "red");
   }
 });

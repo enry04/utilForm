@@ -22,9 +22,11 @@
                             <input type="date" class="input-date" required="required">
                             <span>date</span>
                         </div>
-                        <div class="file-container input-container">
-                            <input type="file" class="input-file" required="required">
-                            <span id="current-file">Choose file</span>
+                        <div class="file-container">
+                            <input type="file" class="input-file" id="input-file" required="required">
+                            <label for="input-file">
+                                <span class="current-file">Seleziona file</span>
+                            </label>
                         </div>
                     </div>
                     <div class="third-row-container row">
