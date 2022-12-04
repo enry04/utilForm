@@ -28,7 +28,7 @@ const headerValues = [
 btnConfirm.addEventListener("click", (event) => {
   if ((textBar.value != null) & (textBar.value != "")) {
     const data = {
-      currentSearch: textBar.value,
+      currentSearch: textBar.value.split(' ').join(''),
     };
     FetchManager.postData("../mainPage/php/readFilter.php", data).then(
       (response) => {
