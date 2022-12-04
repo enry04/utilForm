@@ -5,19 +5,34 @@ class PopupManager {
     this.popupContent = this.overlayElement.querySelector(".popup-content");
     this.closeBtn = this.overlayElement.querySelector(".close-popup");
   }
-  showPopup(content, color) {
+  showPopup(content, color, destPagePath) {
     this.overlayElement.style.visibility = "visible";
     this.overlayElement.style.opacity = "1";
     this.popupElement.style.border = "solid " + color;
     this.popupContent.style.color = color;
     this.popupContent.innerHTML = content;
+
     this.closeBtn.addEventListener("click", (event) => {
       this.closePopup();
+      if (
+        destPagePath != undefined &&
+        destPagePath != null &&
+        destPagePath != ""
+      ) {
+        location.href = destPagePath;
+      }
     });
     if (this.overlayElement.style.opacity == "1") {
       window.addEventListener("click", (event) => {
         if (event.target == this.overlayElement) {
-            this.closePopup();
+          this.closePopup();
+          if (
+            destPagePath != undefined &&
+            destPagePath != null &&
+            destPagePath != ""
+          ) {
+            location.href = destPagePath;
+          }
         }
       });
     }

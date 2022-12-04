@@ -5,7 +5,7 @@ require("../../common/php/connection.php");
 $connection = new ConnectionMySQL();
 $pdo = $connection->getConnection();
 
-$query = $pdo->query("SELECT * FROM radioet");
+$query = $pdo->query("SELECT * FROM supporto");
 $dataList = $query->fetchAll();
 $result = null;
 
@@ -22,5 +22,3 @@ if($dataList != null) {
 }
 
 echo json_encode($result);
-
-?>

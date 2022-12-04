@@ -15,8 +15,8 @@
         <h1 class="title-name">Backoffice</h1>
     </div>
     <div class="search-add-container">
-            <input type="text" placeholder="Cerca record..." required="required" class="search-text">
-            <input type="button" value="Conferma" class="confirm-btn">
+        <input type="text" placeholder="Cerca record..." required="required" class="search-text">
+        <input type="button" value="Conferma" class="confirm-btn">
         <a href="../formPage/formPage.php">
             <input type="button" value="Aggiungi record" class="add-record-btn">
         </a>
@@ -31,11 +31,9 @@
         </div>
     </main>
     <script type="module" src="js/mainView.js"></script>
-    <div class="popup-overlay">
-	<div class="popup-container">
-    <h2 class="popup-content"></h2>
-    <span class="close-popup">&times;</span>
-	</div>
+    <?php
+    require("../common/php/popupTemplate.php");
+    ?>
 </body>
 
 </html>

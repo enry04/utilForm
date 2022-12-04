@@ -28,5 +28,3 @@ if($dataList != null){
 }
 
 echo json_encode($result);
-
-?>

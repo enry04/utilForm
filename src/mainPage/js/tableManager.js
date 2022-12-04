@@ -63,11 +63,10 @@ class TableManager {
     });
 
     this.btns.btnModify.addEventListener("click", (event) => {
-      if(this.btns.btnModify.value == "modifica"){
-        this.btns.btnModify.value = "conferma";
-      }else{
-        this.btns.btnModify.value = "modifica";
-      }
+      let valuesToSend = new URLSearchParams();
+      valuesToSend.append("idElement", this.row.firstChild.textContent);
+      location.href =
+        "../modifyFormPage/modifyFormPage.php?" + valuesToSend.toString();
     });
   }
 
