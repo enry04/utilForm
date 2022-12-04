@@ -27,5 +27,3 @@ if($currentElement != null) {
 }
 
 echo json_encode($result);
-
-?>

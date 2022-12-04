@@ -12,24 +12,23 @@ class RadioManager {
     this.template = templateElement.documentElement.querySelector("body > div");
   }
 
-  init(){
+  init() {
     this.initElements();
   }
 
-  initElements(){
+  initElements() {
     this.elements = {
-        radio : this.template.querySelector(".input-radio"),
-        label: this.template.querySelector(".radio-label"),
-    }
+      radio: this.template.querySelector(".input-radio"),
+      label: this.template.querySelector(".radio-label"),
+    };
     this.rootElement.appendChild(this.template);
   }
 
-  setRadioValues(id, name){
+  setRadioValues(id, name) {
     this.elements.radio.id = id;
     this.elements.label.innerHTML = name;
     this.elements.label.htmlFor = this.elements.radio.id;
   }
-
 }
 
 export default RadioManager;

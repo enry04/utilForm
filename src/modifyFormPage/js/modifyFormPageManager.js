@@ -6,7 +6,9 @@ class FormPageManager {
     this.elements = {};
     this.data = data;
     console.log(this.data);
-    this.popupManager = new PopupManager(document.querySelector(".popup-overlay"));
+    this.popupManager = new PopupManager(
+      document.querySelector(".popup-overlay")
+    );
     const parser = new DOMParser();
     const radioTemplateString =
       '<div class="input-container radio-container"><input type="radio" name="radio" class="input-radio" required="required"><label class="radio-label"></label></div>';
@@ -35,60 +37,77 @@ class FormPageManager {
       form: this.rootElement.querySelector("form"),
     };
 
-    this.elements.text.value = this.data['testo'];
-    this.elements.date.value = this.data['data'];
+    this.elements.text.value = this.data["testo"];
+    this.elements.date.value = this.data["data"];
     this.elements.checkBox.checked = this.setPreCheckBoxValue();
-    this.elements.number.value = this.data['numero'];
-    this.elements.file.name = this.data['percorso']; 
+    this.elements.number.value = this.data["numero"];
+    this.elements.file.name = this.data["percorso"];
 
-    this.elements.selectedFile.textContent = this.data['percorso'];
+    this.elements.selectedFile.textContent = this.data["percorso"];
     this.setPreSelectedRadio();
-    this.elements.select.value = this.data['idSupporto'];
-}
+    this.elements.select.value = this.data["idSupporto"];
+  }
 
   initEventListeners() {
-
     this.elements.file.addEventListener("change", (event) => {
       this.elements.selectedFile.textContent = this.elements.file.files[0].name;
-
     });
 
     this.elements.form.addEventListener("submit", (event) => {
       event.preventDefault();
       var date = new Date(this.elements.date.value);
       const data = {
-        'text': this.elements.text.value,
-        'date': date.toISOString().slice(0, 19).replace('T', ' '),
-        'checkBox': this.getCheckBoxValue(),
-        'number': parseInt(this.elements.number.value),
-        'file': this.elements.file.value,
-        'idRadio': parseInt(this.getSelectedRadio()),
-        'idSelect': parseInt(this.elements.select.value),
+        currentId: this.data["id"],
+        text: this.elements.text.value,
+        date: date.toISOString().slice(0, 19).replace("T", " "),
+        checkBox: this.getCheckBoxValue(),
+        number: parseInt(this.elements.number.value),
+        file: this.elements.selectedFile.textContent,
+        idRadio: parseInt(this.getSelectedRadio()),
+        idSelect: parseInt(this.elements.select.value),
       };
 
-      FetchManager.postData("../formPage/php/updateElement.php", data).then(
-        (response) => {
-          if(response.status == "success") {
-
-          }
+      FetchManager.postData(
+        "../modifyFormPage/php/updateElement.php",
+        data
+      ).then((response) => {
+        if (response.status == "success") {
+          this.popupManager.showPopup(
+            "Record modificato con successo",
+            "#3AE51B",
+            "../mainPage/mainPage.php"
+          );
         }
-      );
-     
+      });
     });
   }
 
-  setPreCheckBoxValue(){
-    if(this.data['camposn'] == '1'){
-        return true;
-    }else{
-        return false;
+  setPreCheckBoxValue() {
+    if (this.data["camposn"] == "1") {
+      return true;
+    } else {
+      return false;
     }
   }
 
   setPreSelectedRadio() {
     for (let i = 0; i < this.elements.radios.length; i++) {
-      if (this.elements.radios[i].id == this.data['idRadioet']) {
+      if (this.elements.radios[i].id == this.data["idRadioet"]) {
         this.elements.radios[i].checked = true;
+      }
+    }
+  }
+  getCheckBoxValue() {
+    if (this.elements.checkBox.checked == true) {
+      return "1";
+    } else {
+      return "0";
+    }
+  }
+  getSelectedRadio() {
+    for (let i = 0; i < this.elements.radios.length; i++) {
+      if (this.elements.radios[i].checked) {
+        return this.elements.radios[i].id;
       }
     }
   }

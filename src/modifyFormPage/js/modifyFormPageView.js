@@ -53,7 +53,10 @@ await FetchManager.postData("../modifyFormPage/php/readElement.php", data).then(
   (response) => {
     if (response.status == "success") {
       const formParentElement = document.querySelector(".items-container");
-      const modifyFormPageManager = new ModifyFormPageManager(formParentElement, JSON.parse(response.data));
+      const modifyFormPageManager = new ModifyFormPageManager(
+        formParentElement,
+        JSON.parse(response.data)
+      );
       modifyFormPageManager.init();
     } else {
       console.log(response.status);

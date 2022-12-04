@@ -12,7 +12,18 @@ notFoundText.classList.add("not-found-text");
 document.querySelector("body").appendChild(notFoundText);
 notFoundText.style.display = "none";
 let tableData = null;
-const headerValues = ["Id", "Testo", "Data", "Camposn", "Numero", "Percorso", "Supporto", "Radioet", "Modifica", "Elimina"];
+const headerValues = [
+  "Id",
+  "Testo",
+  "Data",
+  "Camposn",
+  "Numero",
+  "Percorso",
+  "Supporto",
+  "Radioet",
+  "Modifica",
+  "Elimina",
+];
 
 btnConfirm.addEventListener("click", (event) => {
   if ((textBar.value != null) & (textBar.value != "")) {
@@ -48,7 +59,6 @@ btnConfirm.addEventListener("click", (event) => {
               rowData["radioetEtichetta"]
             );
           });
-
         } else {
           parentElement.style.display = "none";
           notFoundText.style.display = "block";

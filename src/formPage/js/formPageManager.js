@@ -4,7 +4,9 @@ class FormPageManager {
   constructor(parentElement) {
     this.rootElement = parentElement;
     this.elements = {};
-    this.popupManager = new PopupManager(document.querySelector(".popup-overlay"));
+    this.popupManager = new PopupManager(
+      document.querySelector(".popup-overlay")
+    );
     const parser = new DOMParser();
     const radioTemplateString =
       '<div class="input-container radio-container"><input type="radio" name="radio" class="input-radio" required="required"><label class="radio-label"></label></div>';
@@ -35,28 +37,26 @@ class FormPageManager {
   }
 
   initEventListeners() {
-
     this.elements.file.addEventListener("change", (event) => {
       this.elements.selectedFile.textContent = this.elements.file.files[0].name;
-
     });
 
     this.elements.form.addEventListener("submit", (event) => {
       event.preventDefault();
       var date = new Date(this.elements.date.value);
       const data = {
-        'text': this.elements.text.value,
-        'date': date.toISOString().slice(0, 19).replace('T', ' '),
-        'checkBox': this.getCheckBoxValue(),
-        'number': parseInt(this.elements.number.value),
-        'file': this.elements.file.value,
-        'idRadio': parseInt(this.getSelectedRadio()),
-        'idSelect': parseInt(this.elements.select.value),
+        text: this.elements.text.value,
+        date: date.toISOString().slice(0, 19).replace("T", " "),
+        checkBox: this.getCheckBoxValue(),
+        number: parseInt(this.elements.number.value),
+        file: this.elements.file.value,
+        idRadio: parseInt(this.getSelectedRadio()),
+        idSelect: parseInt(this.elements.select.value),
       };
 
       FetchManager.postData("../formPage/php/insertFormValues.php", data).then(
         (response) => {
-          if(response.status == "success") {
+          if (response.status == "success") {
             this.elements.text.value = "";
             this.elements.date.value = "";
             this.elements.checkBox.checked = false;
@@ -64,11 +64,13 @@ class FormPageManager {
             this.elements.file.value = "";
             this.elements.selectedFile.textContent = "Choose file";
             this.uncheckRadio();
-            this.popupManager.showPopup("Record aggiunto con successo","#3AE51B");
+            this.popupManager.showPopup(
+              "Record aggiunto con successo",
+              "#3AE51B"
+            );
           }
         }
       );
-     
     });
   }
 
@@ -87,10 +89,10 @@ class FormPageManager {
       }
     }
   }
-  uncheckRadio(){
+  uncheckRadio() {
     for (let i = 0; i < this.elements.radios.length; i++) {
       if (this.elements.radios[i].checked) {
-         this.elements.radios[i].checked = false;
+        this.elements.radios[i].checked = false;
       }
     }
   }

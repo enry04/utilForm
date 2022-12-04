@@ -15,7 +15,7 @@
     <?php
     require("../common/php/formTemplate.php");
     ?>
-    <script type="module" src = "js/modifyFormPageView.js"></script>
+    <script type="module" src="js/modifyFormPageView.js"></script>
     <?php
     require("../common/php/popupTemplate.php");
     ?>
