@@ -36,6 +36,13 @@ await FetchManager.postData("../common/php/readSelect.php", data).then(
   }
 );
 
+let defOption = document.createElement("option");
+defOption.value = "0";
+defOption.innerHTML = "-- Scegli --";
+defOption.checked = true;
+selectParentElement.appendChild(defOption);
+
+
 selectData.forEach((optionValue) => {
   const selectManager = new SelectManager(selectParentElement);
   selectManager.setOptionValues(optionValue["id"], optionValue["etichetta"]);

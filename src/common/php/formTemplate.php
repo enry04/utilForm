@@ -43,7 +43,7 @@
                             <span></span>
                         </div>
                         <div class="input-container">
-                            <input type="submit" value="conferma" class="btn-send">
+                            <input type="submit" value="Conferma" class="btn-send">
                         </div>
                     </div>
                 </form>
