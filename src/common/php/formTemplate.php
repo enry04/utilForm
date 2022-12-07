@@ -22,9 +22,11 @@
                             <input type="date" class="input-date" required="required">
                             <span>date</span>
                         </div>
-                        <div class="file-container input-container">
-                            <input type="file" class="input-file" required="required">
-                            <span id="current-file">Choose file</span>
+                        <div class="file-container">
+                            <input type="file" class="input-file" id="input-file">
+                            <label for="input-file" class="file-label">
+                                <span class="current-file">Seleziona file</span>
+                            </label>
                         </div>
                     </div>
                     <div class="third-row-container row">
@@ -41,7 +43,7 @@
                             <span></span>
                         </div>
                         <div class="input-container">
-                            <input type="submit" value="conferma" class="btn-send">
+                            <input type="submit" value="Conferma" class="btn-send">
                         </div>
                     </div>
                 </form>

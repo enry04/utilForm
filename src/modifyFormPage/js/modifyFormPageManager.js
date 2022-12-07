@@ -31,7 +31,8 @@ class FormPageManager {
       checkBox: this.rootElement.querySelector(".input-checkBox"),
       number: this.rootElement.querySelector(".input-number"),
       file: this.rootElement.querySelector(".input-file"),
-      selectedFile: this.rootElement.querySelector("#current-file"),
+      fileLabel: this.rootElement.querySelector(".file-label"),
+      selectedFile: this.rootElement.querySelector(".current-file"),
       radios: this.rootElement.querySelectorAll(".input-radio"),
       select: this.rootElement.querySelector(".input-select"),
       form: this.rootElement.querySelector("form"),
@@ -42,7 +43,9 @@ class FormPageManager {
     this.elements.checkBox.checked = this.setPreCheckBoxValue();
     this.elements.number.value = this.data["numero"];
     this.elements.file.name = this.data["percorso"];
-
+    this.elements.fileLabel.style.border = "#45f3ff solid 1px";
+    this.elements.selectedFile.style.color = "aliceblue";
+    this.elements.select.style.border = "#45f3ff solid 1px";
     this.elements.selectedFile.textContent = this.data["percorso"];
     this.setPreSelectedRadio();
     this.elements.select.value = this.data["idSupporto"];

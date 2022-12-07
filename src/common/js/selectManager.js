@@ -3,7 +3,6 @@ class SelectManager {
     this.rootElement = parentElement;
     this.option = null;
   }
-
   setOptionValues(value, name) {
     this.option = document.createElement("option");
     this.option.value = value;
