@@ -225,24 +225,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: block;
   position: relative;
   width: 200px;
-  height: 50px;
-  border-radius: 25px;
+  height: 40px;
+  border-radius: 5px;
+  border-bottom: #8f8f8f solid 1px;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-weight: bold;
+  color: aliceblue;
   cursor: pointer;
   transition: transform 0.2s ease-out;
 }
 
+.file-container label:hover {
+  border-bottom: #45f3ff solid 1px;
+}
+
 .current-file {
   position: absolute;
-  bottom: -35px;
-  left: 10px;
-  font-size: 0.85rem;
-  color: #555;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  color: #8f8f8f;
 }
 
 .third-row-container {

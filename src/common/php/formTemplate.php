@@ -23,8 +23,8 @@
                             <span>date</span>
                         </div>
                         <div class="file-container">
-                            <input type="file" class="input-file" id="input-file" required="required">
-                            <label for="input-file">
+                            <input type="file" class="input-file" id="input-file">
+                            <label for="input-file" class="file-label">
                                 <span class="current-file">Seleziona file</span>
                             </label>
                         </div>
