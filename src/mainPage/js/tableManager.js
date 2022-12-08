@@ -4,6 +4,7 @@ import PopupManager from "../../common/js/popupManager.js";
 class TableManager {
   constructor(parentElement) {
     this.rootElement = parentElement;
+    console.log(this.rootElement);
     this.row = null;
     this.N_ATTRIBUTES = 10;
     this.btns = {};

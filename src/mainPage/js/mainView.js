@@ -24,6 +24,8 @@ const headerValues = [
 ];
 
 btnConfirm.addEventListener("click", (event) => {
+  tableElement.innerHTML = "";
+  
   if ((textBar.value != null) & (textBar.value != "")) {
     const data = {
       currentSearch: textBar.value.split(' ').join(''),
