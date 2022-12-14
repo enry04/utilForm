@@ -41,17 +41,12 @@ class FormPageManager {
     this.elements.checkBox.checked = this.setPreCheckBoxValue();
     this.elements.number.value = this.data["numero"];
     this.elements.file.value = this.data["percorso"];
-    this.elements.selectedFile.style.color = "aliceblue";
     this.elements.select.style.border = "#45f3ff solid 1px";
     this.setPreSelectedRadio();
     this.elements.select.value = this.data["idSupporto"];
   }
 
   initEventListeners() {
-    this.elements.file.addEventListener("change", (event) => {
-      this.elements.selectedFile.textContent = this.elements.file.files[0].name;
-    });
-
     this.elements.form.addEventListener("submit", (event) => {
       event.preventDefault();
       var date = new Date(this.elements.date.value);
@@ -61,7 +56,7 @@ class FormPageManager {
         date: date.toISOString().slice(0, 19).replace("T", " "),
         checkBox: this.getCheckBoxValue(),
         number: parseInt(this.elements.number.value),
-        file: this.elements.selectedFile.textContent,
+        file: this.elements.file.value,
         idRadio: parseInt(this.getSelectedRadio()),
         idSelect: parseInt(this.elements.select.value),
       };

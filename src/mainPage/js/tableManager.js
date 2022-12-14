@@ -3,12 +3,16 @@ import PopupManager from "../../common/js/popupManager.js";
 
 class TableManager {
   constructor(parentElement) {
+
     this.rootElement = parentElement;
+    this.tableBody = this.rootElement.querySelector("tbody");
+    this.tableHead = this.rootElement.querySelector("thead");
     console.log(this.rootElement);
     this.row = null;
     this.N_ATTRIBUTES = 10;
     this.btns = {};
     this.currentId = null;
+    
     this.popupManager = new PopupManager(
       document.querySelector(".popup-overlay")
     );
@@ -21,7 +25,6 @@ class TableManager {
 
   initElements() {
     this.row = document.createElement("tr");
-
     for (let i = 0; i < this.N_ATTRIBUTES; i++) {
       let tableCell = document.createElement("td");
       if (i == 8) {
@@ -45,9 +48,7 @@ class TableManager {
       btnRemove: this.row.querySelector(".remove-btn"),
     };
 
-    console.log(this.btns);
-
-    this.rootElement.appendChild(this.row);
+    this.tableBody.appendChild(this.row);
   }
   initEventsListener() {
     this.btns.btnRemove.addEventListener("click", (event) => {
@@ -55,12 +56,18 @@ class TableManager {
       const data = {
         currentId: parseInt(this.currentId),
       };
+
       FetchManager.postData("../mainPage/php/removeElement.php", data).then(
         (response) => {
           console.log(response);
         }
       );
       this.row.remove();
+      if(!this.tableBody.hasChildNodes()){
+        this.rootElement.style.visibility = "hidden";
+      }else{
+        this.rootElement.style.visibility = "visible";
+      }
     });
 
     this.btns.btnModify.addEventListener("click", (event) => {

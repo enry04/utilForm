@@ -22,14 +22,12 @@
         </a>
     </div>
 
-    <main>
-        <div class="table-container">
-            <table>
-                <thead>
-                </thead>
-            </table>
-        </div>
-    </main>
+    <div class="table-container">
+        <table>
+            <thead>
+            </thead>
+        </table>
+    </div>
     <script type="module" src="js/mainView.js"></script>
     <?php
     require("../common/php/popupTemplate.php");

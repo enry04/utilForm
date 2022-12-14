@@ -36,47 +36,37 @@ class FormPageManager {
   }
 
   initEventListeners() {
-    this.elements.select.addEventListener("change", (event) => {
-      if (event.target.value == "0") {
-        this.elements.select.style.border = "#8f8f8f solid 1px";
-      } else {
-        this.elements.select.style.border = "#45f3ff solid 1px";
-      }
-    });
 
     this.elements.form.addEventListener("submit", (event) => {
       event.preventDefault();
-      if (this.elements.select.value != "0" && this.elements.selectedFile.textContent != "Seleziona file") {
-        var date = new Date(this.elements.date.value);
-        const data = {
-          text: this.elements.text.value,
-          date: date.toISOString().slice(0, 19).replace("T", " "),
-          checkBox: this.getCheckBoxValue(),
-          number: parseInt(this.elements.number.value),
-          file: this.elements.file.value,
-          idRadio: parseInt(this.getSelectedRadio()),
-          idSelect: parseInt(this.elements.select.value),
-        };
 
-        FetchManager.postData("../formPage/php/insertFormValues.php", data).then(
-          (response) => {
-            if (response.status == "success") {
-              this.elements.text.value = "";
-              this.elements.date.value = "";
-              this.elements.checkBox.checked = false;
-              this.elements.number.value = "";
-              this.elements.file.value = "";
-              this.elements.select.value = "0";
-              this.elements.select.style.border = "#8f8f8f solid 1px";
-              this.uncheckRadio();
-              this.popupManager.showPopup(
-                "Record aggiunto con successo",
-                "#3AE51B"
-              );
-            }
+      var date = new Date(this.elements.date.value);
+      const data = {
+        text: this.elements.text.value,
+        date: date.toISOString().slice(0, 19).replace("T", " "),
+        checkBox: this.getCheckBoxValue(),
+        number: parseInt(this.elements.number.value),
+        file: this.elements.file.value,
+        idRadio: parseInt(this.getSelectedRadio()),
+        idSelect: parseInt(this.elements.select.value),
+      };
+
+      FetchManager.postData("../formPage/php/insertFormValues.php", data).then(
+        (response) => {
+          if (response.status == "success") {
+            this.elements.text.value = "";
+            this.elements.date.value = "";
+            this.elements.checkBox.checked = false;
+            this.elements.number.value = "";
+            this.elements.file.value = "";
+            this.uncheckRadio();
+            this.popupManager.showPopup(
+              "Record aggiunto con successo",
+              "#3AE51B"
+            );
           }
-        );
-      }
+        }
+      );
     });
   }
 
