@@ -256,20 +256,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent;
   text-align: center;
   outline: 0;
-  color: #8f8f8f;
   cursor: pointer;
   border-radius: 5px;
-}
-
-option{
-  border: #8f8f8f solid 1px;
 }
 
 .input-container select:focus,
 .input-container select:checked,
 .input-container select:valid {
-  border: #8f8f8f solid 1px;
+  border: #45f3ff solid 1px;
+  color: #45f3ff;
+}
+
+select > option{
   color: aliceblue;
+  border: #8f8f8f solid 1px;
+  background-color: #28292d;
 }
 
 .fifth-row-container {

@@ -45,7 +45,7 @@ btnConfirm.addEventListener("click", (event) => {
           }
           let tBody = tableElement.createTBody();
           tableData.forEach((rowData) => {
-            const tableManager = new TableManager(tBody);
+            const tableManager = new TableManager(tableElement);
             tableManager.init();
             tableManager.setData(
               rowData["id"],
