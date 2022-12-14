@@ -60,11 +60,13 @@ btnConfirm.addEventListener("click", (event) => {
           });
         } else {
           popupManager.showPopup("Nessun risultato trovato", "red");
+          parentElement.style.display = "none";
           console.log(response);
         }
       }
     );
   } else {
     popupManager.showPopup("Inserisci qualcosa", "red");
+    parentElement.style.display = "none";
   }
 });

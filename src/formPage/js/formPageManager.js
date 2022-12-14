@@ -46,7 +46,7 @@ class FormPageManager {
 
     this.elements.form.addEventListener("submit", (event) => {
       event.preventDefault();
-      if (this.elements.select.value != "0" && this.elements.selectedFile.textContent != "Seleziona file") {
+      
         var date = new Date(this.elements.date.value);
         const data = {
           text: this.elements.text.value,
@@ -76,7 +76,6 @@ class FormPageManager {
             }
           }
         );
-      }
     });
   }
 
