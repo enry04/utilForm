@@ -64,9 +64,9 @@ class TableManager {
       );
       this.row.remove();
       if(!this.tableBody.hasChildNodes()){
-        this.rootElement.style.display = "none";
+        this.rootElement.style.visibility = "hidden";
       }else{
-        this.rootElement.style.display = "flex";
+        this.rootElement.style.visibility = "visible";
       }
     });
 

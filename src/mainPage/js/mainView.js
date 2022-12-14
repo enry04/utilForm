@@ -8,7 +8,7 @@ const textBar = searchBarParent.querySelector(".search-text");
 const btnConfirm = searchBarParent.querySelector(".confirm-btn");
 const parentElement = document.querySelector(".table-container");
 const tableElement = document.querySelector("table");
-parentElement.style.display = "none";
+tableElement.style.visibility = "hidden";
 let tableData = null;
 const headerValues = [
   "Id",
@@ -34,7 +34,7 @@ btnConfirm.addEventListener("click", (event) => {
       (response) => {
         if (response.status == "success") {
           tableElement.innerHTML = "";
-          parentElement.style.display = "flex";
+          tableElement.style.visibility = "visible";
           tableData = JSON.parse(response.data);
           let tHead = tableElement.createTHead();
           let row = tHead.insertRow();
@@ -43,7 +43,7 @@ btnConfirm.addEventListener("click", (event) => {
             th.innerHTML = headerValues[i];
             row.appendChild(th);
           }
-          let tBody = tableElement.createTBody();
+          tableElement.createTBody();
           tableData.forEach((rowData) => {
             const tableManager = new TableManager(tableElement);
             tableManager.init();
@@ -60,13 +60,13 @@ btnConfirm.addEventListener("click", (event) => {
           });
         } else {
           popupManager.showPopup("Nessun risultato trovato", "red");
-          parentElement.style.display = "none";
+          tableElement.style.visibility = "hidden";
           console.log(response);
         }
       }
     );
   } else {
     popupManager.showPopup("Inserisci qualcosa", "red");
-    parentElement.style.display = "none";
+    tableElement.style.visibility = "hidden";
   }
 });
