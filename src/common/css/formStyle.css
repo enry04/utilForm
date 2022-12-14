@@ -154,24 +154,6 @@ input[type="date"]:valid ~ span {
   font-size: 0.75em;
 }
 
-/* .file-container span {
-  font-size: 1em;
-  color: #8f8f8f;
-  transition: 0.5s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-} */
-
-/* input[type="file"]:focus ~ span,
-input[type="file"]:valid ~ span {
-  color: #45f3ff;
-  text-align: center;
-  font-size: 0.85em;
-} */
-
 input[type="text"]:valid,
 input[type="text"]:focus,
 input[type="number"]:valid,
@@ -212,42 +194,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   position: absolute;
   right: 7%;
-}
-
-.input-file {
-  opacity: 0;
-  width: 0.1px;
-  height: 0.1px;
-  position: absolute;
-}
-
-.file-container label {
-  display: block;
-  position: relative;
-  width: 200px;
-  height: 40px;
-  border-radius: 5px;
-  border-bottom: #8f8f8f solid 1px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: aliceblue;
-  cursor: pointer;
-  transition: transform 0.2s ease-out;
-}
-
-.file-container label:hover {
-  border-bottom: #45f3ff solid 1px;
-}
-
-.current-file {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 15px;
-  color: #8f8f8f;
 }
 
 .third-row-container {

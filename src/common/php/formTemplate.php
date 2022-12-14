@@ -10,23 +10,21 @@
                     <div class="first-row-container row">
                         <div class="input-container">
                             <input type="text" name="textBox" class="input-text" required="required">
-                            <span>text</span>
+                            <span>Testo</span>
                         </div>
                         <div class="input-container">
                             <input type="number" name="numberBox" class="input-number" required="required" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
-                            <span>number</span>
+                            <span>Numero</span>
                         </div>
                     </div>
                     <div class="second-row-container row">
                         <div class="input-container">
                             <input type="date" class="input-date" required="required">
-                            <span>date</span>
+                            <span>Data</span>
                         </div>
-                        <div class="file-container">
-                            <input type="file" class="input-file" id="input-file">
-                            <label for="input-file" class="file-label">
-                                <span class="current-file">Seleziona file</span>
-                            </label>
+                        <div class="input-container">
+                            <input type="text" class="input-file" id="input-file" required="required">
+                            <span>File</span>
                         </div>
                     </div>
                     <div class="third-row-container row">

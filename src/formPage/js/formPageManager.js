@@ -29,8 +29,6 @@ class FormPageManager {
       checkBox: this.rootElement.querySelector(".input-checkBox"),
       number: this.rootElement.querySelector(".input-number"),
       file: this.rootElement.querySelector(".input-file"),
-      fileLabel: this.rootElement.querySelector(".file-label"),
-      selectedFile: this.rootElement.querySelector(".current-file"),
       radios: this.rootElement.querySelectorAll(".input-radio"),
       select: this.rootElement.querySelector(".input-select"),
       form: this.rootElement.querySelector("form"),
@@ -38,12 +36,6 @@ class FormPageManager {
   }
 
   initEventListeners() {
-    this.elements.file.addEventListener("change", (event) => {
-      this.elements.selectedFile.textContent = event.target.files[0].name;
-      this.elements.fileLabel.style.border = "#45f3ff solid 1px";
-      this.elements.selectedFile.style.color = "aliceblue";
-    });
-
     this.elements.select.addEventListener("change", (event) => {
       if (event.target.value == "0") {
         this.elements.select.style.border = "#8f8f8f solid 1px";
@@ -74,10 +66,6 @@ class FormPageManager {
               this.elements.checkBox.checked = false;
               this.elements.number.value = "";
               this.elements.file.value = "";
-              this.elements.selectedFile.textContent = "Seleziona file";
-              this.elements.fileLabel.style.border = "none";
-              this.elements.fileLabel.style.borderBottom = "1px #8f8f8f solid";
-              this.elements.selectedFile.style.color = "#8f8f8f";
               this.elements.select.value = "0";
               this.elements.select.style.border = "#8f8f8f solid 1px";
               this.uncheckRadio();
