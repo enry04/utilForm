@@ -72,9 +72,9 @@ class FormPageManager {
 
   getCheckBoxValue() {
     if (this.elements.checkBox.checked == true) {
-      return "1";
+      return "s";
     } else {
-      return "0";
+      return "n";
     }
   }
 

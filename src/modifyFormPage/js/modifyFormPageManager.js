@@ -77,7 +77,7 @@ class FormPageManager {
   }
 
   setPreCheckBoxValue() {
-    if (this.data["camposn"] == "1") {
+    if (this.data["camposn"] == "s") {
       return true;
     } else {
       return false;
@@ -93,9 +93,9 @@ class FormPageManager {
   }
   getCheckBoxValue() {
     if (this.elements.checkBox.checked == true) {
-      return "1";
+      return "s";
     } else {
-      return "0";
+      return "n";
     }
   }
   getSelectedRadio() {
